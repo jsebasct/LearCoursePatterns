@@ -1,22 +1,27 @@
 package org.lear.course.patterns.prototype;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A green zone is a city element composed of trees.
  * 
  * @author jscruz
  */
-public class GreenZone implements CityElement {
-	
-	private List<Tree> trees;
+public class GreenZone extends Composable {
 	
 	public GreenZone(int treesQuantity) {
-		trees = new ArrayList<Tree>();
+		elements = new ArrayList<CityElement>();
 		
 		for (int i = 0; i < treesQuantity; i++) {
-			trees.add(new Tree(i+1));
+			elements.add(new Tree(i+1));
+		}
+	}
+
+	@Override
+	public void addElement(CityElement element) {
+		// TODO Auto-generated method stub
+		if (element instanceof Tree) {
+			elements.add(element);
 		}
 	}
 }

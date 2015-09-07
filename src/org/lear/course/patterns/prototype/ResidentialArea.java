@@ -1,16 +1,23 @@
 package org.lear.course.patterns.prototype;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ResidentialArea implements CityElement {
-	private List<House> houses;
+public class ResidentialArea extends Composable {
+	
+	//private List<House> houses;
 	
 	public ResidentialArea() {
-		houses = new ArrayList<>();
+		elements = new ArrayList<>();
 	}
 	
-	public void addHouse(House house) {
-		houses.add(house);
+//	public void addHouse(House house) {
+//		elements.add(house);
+//	}
+
+	@Override
+	public void addElement(CityElement element) {
+		if (element instanceof House) {
+			elements.add(element);
+		}
 	}
 }

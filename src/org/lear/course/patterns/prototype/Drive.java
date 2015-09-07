@@ -4,6 +4,23 @@ package org.lear.course.patterns.prototype;
  * Se desea realizar un programa que modele un mapa virtual al estilo SimCity
  * Realizar un componente que entregue elementos ya construidos de la ciudad.
  * 
+ * 
+ * La ciudad está montada sobre un terreno este a su vez pueden está compuesto por 
+ * terrenos más pequeños creando así sub divisiones. Desarrollar un componente 
+ * que organice esta estructura.
+ * [sounds like DECORATOR]
+ * 
+ * 
+ * Sobre cada terreno de la ciudad debe ser posible colocar un elemento.
+ * Cada elemento tiene que realizar una función diferente.
+ * Desarrollar una estrategia que solucione esta problemática.
+ * [sounds like ...]
+ * 
+ * 
+ * Se desea poder obtener una instancia de VirtualMap sin conocer como es creada.
+ * Desarrollar una solución.
+ * [sounds like ...]
+ * 
  * @author jscruz
  */
 public class Drive {
