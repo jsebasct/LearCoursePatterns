@@ -14,7 +14,7 @@ package org.lear.course.patterns.prototype;
  * Sobre cada terreno de la ciudad debe ser posible colocar un elemento.
  * Cada elemento tiene que realizar una función diferente.
  * Desarrollar una estrategia que solucione esta problemática.
- * [sounds like ...]
+ * [sounds like ...STRETEGY]
  * 
  * 
  * Se desea poder obtener una instancia de VirtualMap sin conocer como es creada.
@@ -38,6 +38,9 @@ public class Drive {
 		//small.setName("Parque Chacabuco");
 		//Park small2 = (Park)city.getPark("small_park");
 		//System.out.println(small2.getName());
+		
+		IndustryArea area = (IndustryArea) city.getIndustryArea("small_industry");
+		area.generateResource();
 	}
 
 }

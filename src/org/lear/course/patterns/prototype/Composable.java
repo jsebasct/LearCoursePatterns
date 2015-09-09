@@ -7,4 +7,6 @@ public abstract class Composable implements CityElement {
 	protected List<CityElement> elements;
 	
 	public abstract void addElement(CityElement element);
+	
+	protected CityFactory cityFactory;
 }
